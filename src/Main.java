@@ -35,10 +35,10 @@ public class Main {
                 case 4:
                     sc.nextLine();
                     System.out.println("Qual o CPF do funcionário que deseja mudar o nome: ");
-                    String cpf = sc.nextLine();
+                    String cpfToUpdate = sc.nextLine();
                     System.out.println("Qual o novo nome: ");
                     String newName = sc.nextLine();
-                    db.uptade(conn, "Funcionario", cpf, newName);
+                    db.update(conn, "Funcionario", cpfToUpdate, newName);
                     break;
             }
         }

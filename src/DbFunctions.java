@@ -47,7 +47,7 @@ public class DbFunctions {
             statement = conn.createStatement();
             statement.executeUpdate(query);
 
-            System.out.println("Row deleted");
+            System.out.println("Row updated");
         }catch(Exception e){
             System.out.println(e);
         }
