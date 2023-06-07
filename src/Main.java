@@ -28,6 +28,18 @@ public class Main {
                     System.out.println("Qual o CPF do funcionário que deseja apagar: ");
                     String cpfToDelete = sc.nextLine();
                     db.delete_row(conn, "Funcionario", cpfToDelete);
+                    break;
+                case 3:
+                    db.list(conn, "Funcionario");
+                    break;
+                case 4:
+                    sc.nextLine();
+                    System.out.println("Qual o CPF do funcionário que deseja mudar o nome: ");
+                    String cpf = sc.nextLine();
+                    System.out.println("Qual o novo nome: ");
+                    String newName = sc.nextLine();
+                    db.uptade(conn, "Funcionario", cpf, newName);
+                    break;
             }
         }
     }

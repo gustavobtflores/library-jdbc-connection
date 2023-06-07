@@ -53,7 +53,7 @@ public class DbFunctions {
         }
     }
 
-    public void list(Connection conn,String table_name, String cpf){
+    public void list(Connection conn,String table_name){
         Statement statement;
 
         try {
@@ -69,11 +69,11 @@ public class DbFunctions {
         }
     }
 
-    public void update(Connection conn,String table_name, String cpf){
+    public void update(Connection conn,String table_name, String cpf, String nome){
         Statement statement;
 
         try {
-            String query = String.format("UPDATE", table_name, cpf);
+            String query = String.format("UPDATE %s SET nome = '%s' WHERE cpf = '%s' ", table_name, nome, cpf);
             statement = conn.createStatement();
             statement.executeUpdate(query);
 
